@@ -1,5 +1,5 @@
 package factories.comments
-
+import domain.comments.{Abuse, Response}
 import org.joda.time.DateTime
 
 /**
@@ -8,8 +8,8 @@ import org.joda.time.DateTime
 
 object AbuseFactory {
 
-  def getAbuse(siteId:String,subjectId:String, commentIdOrResponseId:String, abuseId:String, details:String, emailId:String, date:DateTime): Unit ={
-
+  def getAbuse (value:Map[String,String],dates:DateTime):Abuse = {
+    Abuse(siteId = value("siteId"),subjectId = value("subjectId"),commentIdOrResponseId = value("responseId"),abuseId = value("abuseId"),
+      details = value("details"),emailId = value("emailId"),date = dates)
   }
-
 }

@@ -1,5 +1,5 @@
 package factories.comments
-
+import domain.comments.{Comment, Subject}
 import org.joda.time.DateTime
 
 /**
@@ -8,9 +8,11 @@ import org.joda.time.DateTime
 
 object CommentsFactory {
 
-  def getComments (commentId:String,responseId:String,response:String, emailId:String, ipaddress:String,date:DateTime): Unit ={
+  def getComments (value:Map[String,String],dates:DateTime): Comment ={
+    Comment(siteId = value("siteId"),subjectId = value("subjectId"),
+      commentId = value("commentId"),emailId = value("emailId"),
+      ipaddress = value("ipaddress"),comment = value("comment"),date = dates)
 
-
-  }
+    }
 
 }

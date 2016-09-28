@@ -1,5 +1,5 @@
 package factories.comments
-
+import domain.comments.{Response, Comment}
 import org.joda.time.DateTime
 
 /**
@@ -8,8 +8,10 @@ import org.joda.time.DateTime
 
 object ResponseFactory {
 
-  def getResponse(commentId:String,responseId:String,response:String, emailId:String, ipaddress:String,date:DateTime): Unit ={
-
+  def getResponse(value:Map[String,String],dates:DateTime):Response = {
+    Response(commentId = value("commentId"),responseId = value("responseId"),
+      response = value("response"),emailId = value("emailId"),
+      ipaddress = value("ipaddress"),date = dates)
   }
 
 }
