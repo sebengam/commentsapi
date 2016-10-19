@@ -50,10 +50,6 @@ libraryDependencies += "org.apache.commons" % "commons-email" % "1.4"
 libraryDependencies += "com.squareup.okhttp3" % "okhttp" % "3.4.1"
 
 
-
-
-
-
 // redis-server cache
 libraryDependencies += "com.github.karelcemus" %% "play-redis" % "1.2.0"
 libraryDependencies += "com.github.romix.akka" %% "akka-kryo-serialization" % "0.4.1"
