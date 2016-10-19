@@ -8,7 +8,6 @@ import org.scalatest.FunSuite
 class SubjectFactory$Test extends FunSuite {
 
   test("testCreateSubject") {
-
   }
 
 }
