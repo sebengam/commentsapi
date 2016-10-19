@@ -1,6 +1,7 @@
 logs
 target
 /.idea
+.idea
 bin/
 libexec/
 /.idea_modules
